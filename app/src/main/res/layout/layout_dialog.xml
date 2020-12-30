@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ddebfb">
+
+    <ImageButton
+        android:id="@+id/fullscreen_dialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_close_black_18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:text="Post an OddJob"
+        android:textColor="#262c4c"
+        android:textSize="35sp"/>
+
+    <EditText
+        android:id="@+id/enterTitle"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="Title"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <EditText
+        android:id="@+id/enterPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:hint="Price ($)"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="number"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <EditText
+        android:id="@+id/enterDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lines="8"
+        android:layout_marginTop="230dp"
+        android:hint="Description (280 character limit)"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="textMultiLine"
+        android:maxLength="280"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <TextView
+        android:id="@+id/postJob"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:paddingRight="100dp"
+        android:paddingLeft="100dp"
+        android:text="Post Job" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="440dp">
+
+        <fragment
+
+            android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            class="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

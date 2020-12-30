@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "719709181361",
+    "project_id": "oddjob-52ad8",
+    "storage_bucket": "oddjob-52ad8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719709181361:android:4eb0b22cc55063bf2b9990",
+        "android_client_info": {
+          "package_name": "com.example.oddjob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719709181361-o9sngo3hvj3rn9i75rfu21vh5r0d7kvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOGQiR3cMIiJlyVQiX4t0QGW4yNc8cU8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719709181361-o9sngo3hvj3rn9i75rfu21vh5r0d7kvn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

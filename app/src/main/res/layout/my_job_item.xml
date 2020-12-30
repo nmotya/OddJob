@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ddebfb">
+
+            <TextView
+                android:id="@+id/myTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Need someone to fix my dishwasher "
+                android:textColor="#262c4c"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/myAddress"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:paddingBottom="10dp"
+                    android:text="2884 Walnut Hill Street"
+                    android:textColor="#262c4c"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/myPrice"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="$100"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/myDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F2F2F2"
+                android:background="@drawable/textbox"
+                android:textColor="#000"
+                android:paddingLeft="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingBottom="10dp"
+                android:text="Need someone to fix my dishwasher. Willing to pay more if needed. "
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/myDelete"
+                android:layout_width="wrap_content"
+                android:background="@drawable/roundedbutton"
+                android:layout_height="wrap_content"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:backgroundTint="#5e8de9"
+                android:textColor="#ffffff"
+                android:layout_gravity="right"
+                android:textSize="15sp"
+                android:paddingRight="45dp"
+                android:paddingLeft="45dp"
+                android:text="Delete"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/myJobId"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

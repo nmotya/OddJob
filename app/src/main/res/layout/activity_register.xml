@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddebfb"
+    tools:context=".RegisterActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        android:textStyle="bold"
+        android:text="Welcome to OddJob!"
+        android:textColor="#262c4c"
+        android:textSize="35sp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:hint="Email"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:hint="First Name"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:hint="Phone Number"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:hint="Password"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:hint="Confirm Password"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#F2F2F2"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:paddingStart="15dp"/>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:paddingRight="100dp"
+        android:paddingLeft="100dp"
+        android:text="Register" />
+
+    <TextView
+        android:id = "@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="560dp"
+        android:text="Cancel"
+
+        android:textSize="15sp"/>
+
+
+</RelativeLayout>
