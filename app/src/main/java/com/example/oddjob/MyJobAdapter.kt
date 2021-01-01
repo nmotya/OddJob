@@ -17,14 +17,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-lateinit var privateParent : ViewGroup
 
 class MyJobAdapter(
         var List:List<Job>,
         private val layout: Int) : RecyclerView.Adapter<MyJobViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyJobViewHolder {
-        privateParent = parent
         val v = LayoutInflater.from(parent.context).inflate(layout, parent, false)
         return MyJobViewHolder(v)
     }
@@ -35,11 +33,9 @@ class MyJobAdapter(
 
     override fun getItemCount() = List.size
 
-
 }
-
+//feed information from the job objects list into the individual job views
 class MyJobViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
       private var myTitle: TextView = view.findViewById(R.id.myTitle)
       private var myAddress: TextView = view.findViewById(R.id.myAddress)
       private var myPrice: TextView = view.findViewById(R.id.myPrice)
@@ -54,10 +50,10 @@ class MyJobViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         myJobId.text = item.jobId
         myAddress.text = item.jobAddress
 
+        //set listener for the delete button to delete the job that it is attached to
         delete.setOnClickListener {
             val mDatabase = FirebaseDatabase.getInstance().getReference()
             mDatabase.child("jobs/${item.placeId}").child(myJobId.text.toString()).removeValue()
         }
-        //placeId.text = item.placeId
     }
 }

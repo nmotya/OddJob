@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:layout_marginStart="10dp"
         android:textColor="@color/quantum_googblue"
         android:textSize="20sp" />
@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textStyle="bold"
-        android:text="Edit Profile"
+        android:text="@string/edit_profile"
         android:textColor="#262c4c"
         android:textSize="35sp"/>
 
@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textStyle="bold"
-        android:text="Edit Profile"
+        android:text="@string/edit_profile"
         android:textColor="#262c4c"
         android:textSize="35sp"/>
 
@@ -71,7 +71,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
 
-            android:text="Camera"
+            android:text="@string/camera"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="20sp" />
@@ -93,7 +93,7 @@
             android:backgroundTint="#8d61e4"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Gallery"
+            android:text="@string/gallery"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="20sp" />
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:background="@drawable/roundedbutton"
-        android:hint="New Name"
+        android:hint="@string/new_name"
         android:backgroundTint="#F2F2F2"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
@@ -127,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="460dp"
         android:background="@drawable/roundedbutton"
-        android:hint="New Phone #"
+        android:hint="@string/new_phone"
         android:backgroundTint="#F2F2F2"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
@@ -149,6 +149,5 @@
         android:textSize="20sp"
         android:paddingRight="100dp"
         android:paddingLeft="100dp"
-        android:text="Submit" />
-
+        android:text="@string/submit" />
 </RelativeLayout>

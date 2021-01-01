@@ -49,12 +49,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom = "true"
-            android:layout_alignParentRight = "true"
+            android:layout_alignParentEnd = "true"
             android:fillViewport="true"
             android:backgroundTint="#b94df0"
             app:borderWidth="0dp"
             android:layout_marginBottom="54dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/baseline_handyman_black_18dp" />
     </RelativeLayout>
 
@@ -72,7 +72,7 @@
             android:layout_marginTop="50dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="15dp"
-            android:text="Edit"
+            android:text="@string/edit"
             android:layout_marginStart="10dp"
             android:textColor="@color/quantum_googblue"
             android:textSize="20sp" />
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="325dp"
-            android:text="My Profile"
+            android:text="@string/my_profile"
             android:layout_centerHorizontal="true"
             android:textColor="#262c4c"
             android:textSize="40sp"
@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="400dp"
-            android:text="Name: Nassim"
+            android:text="@string/name_nassim"
             android:layout_marginStart="10dp"
             android:textColor="#262c4c"
             android:textSize="20sp"
@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="445dp"
-            android:text="Contact # : 257-912-1596"
+            android:text="@string/contact_257_912_1596"
             android:layout_marginStart="10dp"
             android:textColor="#262c4c"
             android:textSize="20sp"
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="490dp"
-            android:text="Email : pokemaster642@gmail.com"
+            android:text="@string/email_pokemaster642_gmail_com"
             android:layout_marginStart="10dp"
             android:textColor="#262c4c"
             android:textSize="20sp"
@@ -160,7 +160,7 @@
             android:textSize="20sp"
             android:paddingRight="100dp"
             android:paddingLeft="100dp"
-            android:text="Log Out" />
+            android:text="@string/log_out" />
 
     </RelativeLayout>
 
@@ -177,7 +177,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="325dp"
-        android:text="This is where your posted jobs go!"
+        android:text="@string/this_is_where_your_posted_jobs_go"
         android:layout_centerInParent="true"
         android:textAlignment="center"
         android:textColor="#262c4c"

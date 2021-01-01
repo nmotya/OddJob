@@ -1,7 +1,5 @@
 package com.example.oddjob
 
-import android.net.Uri
-
 data class Job(
         var lattitude: Double,
         var longitude: Double,

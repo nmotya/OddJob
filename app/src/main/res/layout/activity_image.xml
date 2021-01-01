@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="125dp"
         android:textStyle="bold"
-        android:text="Upload a Profile Picture"
+        android:text="@string/upload_a_profile_picture"
         android:textColor="#262c4c"
         android:textSize="35sp"/>
 
@@ -41,7 +40,6 @@
             android:id="@+id/camera_upload"
             android:layout_width="0dp"
             android:layout_weight="3"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="450dp"
             android:background="@drawable/roundedbutton"
             android:layout_height="wrap_content"
@@ -53,7 +51,7 @@
             android:layout_marginStart="2dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Camera" />
+            android:text="@string/camera" />
 
         <View
             android:layout_width="0dp"
@@ -63,7 +61,6 @@
             android:id="@+id/gallery_upload"
             android:layout_width="0dp"
             android:layout_weight="3"
-            android:layout_centerHorizontal="true"
             android:layout_marginStart="2dp"
             android:backgroundTint="#8d61e4"
             android:layout_marginEnd="2dp"
@@ -75,7 +72,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textAlignment="center"
-            android:text="Gallery" />
+            android:text="@string/gallery" />
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -95,6 +92,6 @@
         android:textSize="20sp"
         android:paddingRight="100dp"
         android:paddingLeft="100dp"
-        android:text="Upload Image" />
+        android:text="@string/upload_image" />
 
 </RelativeLayout>

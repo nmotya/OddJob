@@ -28,7 +28,6 @@
         android:theme="@style/Theme.OddJob">
         <activity android:name=".EditActivity"></activity>
         <activity android:name=".ImageActivity" />
-        <activity android:name=".SettingsActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

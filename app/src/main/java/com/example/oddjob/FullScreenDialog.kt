@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,7 +20,6 @@ import java.util.ArrayList
 
 
 class FullScreenDialog : DialogFragment(){
-
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -35,11 +34,8 @@ class FullScreenDialog : DialogFragment(){
         setStyle(STYLE_NO_TITLE, R.style.FullscreenDialogTheme)
         val addressTitle : TextView = rootView.findViewById(R.id.addressTitle)
 
+        //get all the jobs that are associated with the address of the marker clicked and put them into an arraylist
         placeId?.let { jobDataReference!!.child(it) }?.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
             override fun onDataChange(snapshot: DataSnapshot) {
                 for (placeIdSnapshot in snapshot.children) {
                     val map : Map<String, String> = placeIdSnapshot.value as Map<String, String>
@@ -62,24 +58,27 @@ class FullScreenDialog : DialogFragment(){
                     jobList.add(newJob)
                 }
             }
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(context,"An error occurred. Try again.", Toast.LENGTH_LONG).show()
+            }
         })
 
+        //set up recycler view and feed it the arraylist of jobs
         val recyclerView: RecyclerView = rootView.findViewById(R.id.job_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
         val adapter = context?.let { JobAdapter(it, jobList, R.layout.job_item) }
         recyclerView.adapter = adapter
         adapter!!.notifyDataSetChanged()
 
-
         val exit : ImageButton = rootView.findViewById(R.id.fullscreen_dialog_close)
 
         exit.setOnClickListener{
             dismiss()
         }
-
         return rootView
     }
 
+    // changes size of dialog fragment to match the screen size
     override fun onStart() {
         super.onStart()
         val dialog: Dialog? = dialog

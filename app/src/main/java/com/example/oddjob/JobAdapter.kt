@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 
 class JobAdapter(
@@ -27,6 +26,7 @@ class JobAdapter(
     override fun getItemCount() = List.size
 }
 
+//feed information from the job objects list into the individual job views
 class JobViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private var jobPerson: TextView = view.findViewById(R.id.jobPerson)
@@ -45,7 +45,7 @@ class JobViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         jobPrice.text = "$" + item.price
         jobDescription.text = item.description
         Picasso.get()
-                .load(item.imageUrl) // load the image
+                .load(item.imageUrl)
                 .into(jobImage)
     }
 }

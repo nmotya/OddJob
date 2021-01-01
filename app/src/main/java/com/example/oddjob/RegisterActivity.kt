@@ -1,20 +1,16 @@
  package com.example.oddjob
 
-import android.accessibilityservice.GestureDescription
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.telephony.PhoneNumberUtils
 import android.util.Patterns
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.database.FirebaseDatabase
 
  class RegisterActivity : AppCompatActivity() {
@@ -38,12 +34,15 @@ import com.google.firebase.database.FirebaseDatabase
         }
 
 
+        //if register button is clicked, send the information in the entry fields to database
         register.setOnClickListener{
             val emailString = email.text.toString().trim()
             val firstNameString = firstName.text.toString().trim()
             val passwordString = password.text.toString().trim()
             val confirmPasswordString = confirmPassword.text.toString().trim()
             val userNumber = phoneNumber.text.toString().trim()
+
+            //checking to see if input fields are valid / not empty
 
             if (emailString.isEmpty()){
                 email.setError("Email is required!")
@@ -85,6 +84,13 @@ import com.google.firebase.database.FirebaseDatabase
                 return@setOnClickListener
             }
 
+            if (!userNumber.matches("^(1\\-)?[0-9]{3}\\-?[0-9]{3}\\-?[0-9]{4}$".toRegex())){
+                phoneNumber.setError("Enter a valid phone number!")
+                phoneNumber.requestFocus()
+                return@setOnClickListener
+            }
+
+            //user firebase's auth service to create a user account
             mAuth.createUserWithEmailAndPassword(emailString, passwordString).addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
                     val userId : String? = FirebaseAuth.getInstance().currentUser?.uid
@@ -97,6 +103,8 @@ import com.google.firebase.database.FirebaseDatabase
                         )
 
                     }
+
+                    //send email verification to user
                     userId?.let { it1 ->
                         FirebaseDatabase.getInstance()
                                 .getReference("users").child(it1).setValue(newUser).addOnCompleteListener { task: Task<Void> ->

@@ -20,7 +20,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
-        android:hint="email"
+        android:hint="@string/email"
         android:background="@drawable/roundedbutton"
         android:backgroundTint="#F2F2F2"
         android:layout_marginStart="40dp"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="360dp"
         android:background="@drawable/roundedbutton"
-        android:hint="password"
+        android:hint="@string/password"
         android:backgroundTint="#F2F2F2"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
@@ -44,6 +44,7 @@
         android:inputType="textPassword"
         android:padding="15dp"
         android:paddingStart="15dp"/>
+
     <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
@@ -57,29 +58,15 @@
         android:textSize="20sp"
         android:paddingRight="100dp"
         android:paddingLeft="100dp"
-        android:text="Log In" />
+        android:text="@string/log_in" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/registerText"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/forgotPassword"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="550dp"
-            android:textAlignment="center"
-            android:text="Forgot Password?" />
-        <TextView
-            android:id="@+id/registerText"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="550dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:text="Register" />
-    </LinearLayout>
+        android:layout_marginTop="550dp"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/don_t_have_an_account_register_here" />
 
 </RelativeLayout>

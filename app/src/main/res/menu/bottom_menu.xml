@@ -6,13 +6,13 @@
     <item
         android:id = "@+id/myJobs"
         android:icon="@drawable/baseline_handyman_black_18dp"
-        android:title="My Jobs" />
+        android:title="@string/my_jobs" />
     <item
         android:id = "@+id/map"
         android:icon="@drawable/baseline_map_black_18dp"
-        android:title="Map" />
+        android:title="@string/map" />
     <item
         android:id = "@+id/myProfile"
         android:icon="@drawable/baseline_account_circle_black_18dp"
-        android:title="My Profile" />
+        android:title="@string/my_profile" />
 </menu>
