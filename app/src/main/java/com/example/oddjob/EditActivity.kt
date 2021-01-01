@@ -151,12 +151,7 @@ class EditActivity : AppCompatActivity() {
                     .setPhotoUri(Uri.parse(task.result.toString()))
                     .build()
                 getUser!!.updateProfile(profileUpdates)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            val intent = Intent(this, MapsActivity::class.java)
-                            startActivity(intent)
-                        }
-                    }
+
             }
         }
     }
